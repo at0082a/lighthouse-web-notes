@@ -11,7 +11,11 @@ function maxProfit(price, arr) {
      } 
   }
   profit.sort((a, b) => a - b)
+  if (profit[profit.length - 1] <= 0) {
+      return -1
+  } else {
   return "$ " + profit[profit.length - 1] + " is the greatest profit that could have been made at $" + price + " per share"
+  }
 }
 
 console.log(maxProfit(27, prices))
